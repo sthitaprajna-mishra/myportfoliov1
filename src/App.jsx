@@ -1,24 +1,35 @@
-import compass from "../src/assets/compass.png";
+import LunchDiningIcon from "@mui/icons-material/LunchDining";
 
 function App() {
   return (
     <>
-      <div className="bg-lightWhite text-darkBlue font-leagueSpartan">
-        <div className="flex flex-col justify-evenly border-1 border-green-500 ml-20 min-h-screen w-1/2">
-          <div className="h-12 w-12">
-            <img src={compass} alt="compass icon" />
+      {/* <div className="hidden font-leagueSpartan md:flex md:justify-end space-x-12 py-6 pr-12 md:sticky md:top-0 bg-lightWhite bg-opacity-95 border-1 border-green-500">
+        <a>Introduction</a>
+        <a>About</a>
+        <a>Experience</a>
+        <a>Projects</a>
+      </div> */}
+      <div className="bg-lightWhite text-darkBlue font-leagueSpartan flex justify-center pb-[100rem]">
+        <div className="flex flex-col justify-evenly border-1 border-green-500 min-h-screen">
+          <div className="md:hidden">
+            <LunchDiningIcon
+              className="text-orange"
+              style={{ fontSize: "3rem" }}
+            />
           </div>
           <div className="space-y-12">
-            <div className="leading-5">
-              <div className="ml-1 font-bold tracking-wider">Hi, I am</div>
-              <div className="text-red font-semibold text-6xl tracking-wide">
+            <div>
+              <div className="ml-1 text-lg font-bold tracking-wider">
+                Hi, I am
+              </div>
+              <div className="text-red font-semibold text-8xl">
                 Sthitaprajna Mishra
               </div>
-              <div className="text-4xl">
+              <div className="text-5xl">
                 and I like to build products for the web.
               </div>
             </div>
-            <div className=" text-2xl">
+            <div className="w-2/3 text-2xl">
               Let's connect, collaborate, and create. Together, we'll shape the
               future, one line of code at a time.
             </div>
