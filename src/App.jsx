@@ -9,8 +9,8 @@ function App() {
         <a>Experience</a>
         <a>Projects</a>
       </div> */}
-      <div className="bg-lightWhite text-darkBlue font-leagueSpartan flex justify-center pb-[100rem]">
-        <div className="flex flex-col justify-evenly border-1 border-green-500 min-h-screen">
+      <div className="bg-lightWhite text-darkBlue font-leagueSpartan flex justify-center">
+        <div className="flex flex-col justify-evenly border-1 border-green-500 h-screen">
           <div className="md:hidden">
             <LunchDiningIcon
               className="text-orange"
@@ -22,10 +22,10 @@ function App() {
               <div className="ml-1 text-lg font-bold tracking-wider">
                 Hi, I am
               </div>
-              <div className="text-red font-semibold text-8xl">
+              <div className="text-red font-bold text-8xl">
                 Sthitaprajna Mishra
               </div>
-              <div className="text-5xl">
+              <div className="text-5xl font-semibold">
                 and I like to build products for the web.
               </div>
             </div>
