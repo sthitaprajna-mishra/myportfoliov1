@@ -1,6 +1,20 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
+const fadeInAnimationVariations = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
 const Experience = ({ setIsExpInView }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -19,18 +33,26 @@ const Experience = ({ setIsExpInView }) => {
         ref
       </div>
       <motion.div
-        initial={{ marginLeft: "-2000px", opacity: 0 }}
-        whileInView={{ marginLeft: "0", opacity: 1 }}
-        transition={{ duration: 0.75 }}
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={0}
+        viewport={{
+          once: true,
+        }}
         className="text-5xl font-semibold text-darkBlue underline decoration-blue2"
       >
         Experience
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={0}
+        viewport={{
+          once: true,
+        }}
         className="w-5/6 text-xl text-gray1"
       >
         Having graduated with a bachelor's degree in Information Technology, I
@@ -41,9 +63,13 @@ const Experience = ({ setIsExpInView }) => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={0}
+        viewport={{
+          once: true,
+        }}
         className="flex"
       >
         <div className="w-1/2 border-t-2 border-t-gray1 space-y-6">

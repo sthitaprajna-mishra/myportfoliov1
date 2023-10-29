@@ -55,9 +55,13 @@ const Skills = ({ setIsSkillInView }) => {
   return (
     <div className="w-fit flex flex-col ml-20 justify-evenly border-1 border-green-500 h-screen">
       <motion.div
-        initial={{ marginLeft: "-2000px", opacity: 0 }}
-        whileInView={{ marginLeft: "0", opacity: 1 }}
-        transition={{ duration: 0.75 }}
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={0}
+        viewport={{
+          once: true,
+        }}
         ref={ref}
         className="text-5xl font-semibold text-darkBlue underline decoration-blue2"
       >

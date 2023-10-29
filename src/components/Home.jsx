@@ -2,6 +2,20 @@ import React, { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import LunchDiningIcon from "@mui/icons-material/LunchDining";
 
+const fadeInAnimationVariations = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
 const Home = ({ setIsIntroInView }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -20,7 +34,16 @@ const Home = ({ setIsIntroInView }) => {
         <LunchDiningIcon className="text-orange" style={{ fontSize: "3rem" }} />
       </div>
 
-      <div className="border-1 w-fit border-black">
+      <motion.div
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={0}
+        viewport={{
+          once: true,
+        }}
+        className="border-1 w-fit border-black"
+      >
         <div ref={ref} className="ml-1 text-lg font-bold tracking-wider">
           Hi, I am
         </div>
@@ -30,16 +53,34 @@ const Home = ({ setIsIntroInView }) => {
         <div className="text-5xl font-semibold">
           and I like to build products for the web.
         </div>
-      </div>
+      </motion.div>
 
-      <div className="w-2/3 border-1 border-black text-gray1 text-2xl">
+      <motion.div
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={1}
+        viewport={{
+          once: true,
+        }}
+        className="w-2/3 border-1 border-black text-gray1 text-2xl"
+      >
         Welcome to my digital portfolio! I possess a flair for coding,
         creativity, and a profound love for{" "}
         <span className="text-blue2 font-bold">full stack engineering</span>.
         Let's connect, collaborate, and create. Together, we'll shape the
         future, one line of code at a time.
-      </div>
-      <div className="w-2/3 border-1 border-black font-spaceGrotesk">
+      </motion.div>
+      <motion.div
+        variants={fadeInAnimationVariations}
+        initial="initial"
+        whileInView="animate"
+        custom={2}
+        viewport={{
+          once: true,
+        }}
+        className="w-2/3 border-1 border-black font-spaceGrotesk"
+      >
         <div>
           Reach out to me at <span className="underline">LinkedIn</span>,{" "}
           <span className="underline">GitHub</span>, and{" "}
@@ -48,7 +89,7 @@ const Home = ({ setIsIntroInView }) => {
         <div>
           Take a look at my <a className="underline">resume</a>.
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

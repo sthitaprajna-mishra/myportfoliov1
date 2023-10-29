@@ -21,21 +21,21 @@ const Wrapper = () => {
         <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
           <div
             className={`${
-              isIntroInView ? "text-2xl text-red  font-bold" : ""
+              isIntroInView ? "text-3xl text-red  font-bold" : ""
             } transition-all`}
           >
             Introduction
           </div>
           <div
             className={`${
-              isExpInView ? "text-2xl text-red  font-bold" : ""
+              isExpInView ? "text-3xl text-red  font-bold" : ""
             } transition-all`}
           >
             Experience
           </div>
           <div
             className={`${
-              isSkillInView ? "text-2xl text-red  font-bold" : ""
+              isSkillInView ? "text-3xl text-red  font-bold" : ""
             } transition-all`}
           >
             Skills
