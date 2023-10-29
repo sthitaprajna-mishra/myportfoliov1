@@ -14,9 +14,11 @@ const Experience = ({ setIsExpInView }) => {
   }, [isInView]);
 
   return (
-    <div className="w-fit flex flex-col ml-20 bg-lightWhite justify-evenly border-1 border-green-500 h-[95vh]">
+    <div className="w-fit flex flex-col ml-20 bg-lightWhite justify-evenly border-1 border-green-500 h-screen">
+      <div ref={ref} className="text-[2px] text-lightWhite">
+        ref
+      </div>
       <motion.div
-        ref={ref}
         initial={{ marginLeft: "-2000px", opacity: 0 }}
         whileInView={{ marginLeft: "0", opacity: 1 }}
         transition={{ duration: 0.75 }}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Home from "./Home";
 import Experience from "./Experience";
+import Skills from "./Skills";
 
 const Wrapper = () => {
   const [isIntroInView, setIsIntroInView] = useState(false);
@@ -14,6 +15,7 @@ const Wrapper = () => {
       <div className="col-span-10 border-1 border-black">
         <Home setIsIntroInView={setIsIntroInView} />
         <Experience setIsExpInView={setIsExpInView} />
+        <Skills setIsSkillInView={setIsSkillInView} />
       </div>
       <div className="col-span-2 border-1 border-black">
         <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
@@ -31,7 +33,13 @@ const Wrapper = () => {
           >
             Experience
           </div>
-          <div>Skills</div>
+          <div
+            className={`${
+              isSkillInView ? "text-2xl text-red  font-bold" : ""
+            } transition-all`}
+          >
+            Skills
+          </div>
           <div>Projects</div>
         </div>
       </div>
