@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { Link } from "react-scroll";
+
 import Home from "./Home";
 import Experience from "./Experience";
 import Skills from "./Skills";
@@ -24,21 +26,45 @@ const Wrapper = () => {
               isIntroInView ? "text-3xl text-red  font-bold" : ""
             } transition-all`}
           >
-            Introduction
+            <Link
+              className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
+              to="introduction"
+              smooth={true}
+              offset={10}
+              duartion={500}
+            >
+              Introduction
+            </Link>
           </div>
           <div
             className={`${
               isExpInView ? "text-3xl text-red  font-bold" : ""
             } transition-all`}
           >
-            Experience
+            <Link
+              className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
+              to="experience"
+              smooth={true}
+              offset={60}
+              duartion={500}
+            >
+              Experience
+            </Link>
           </div>
           <div
             className={`${
               isSkillInView ? "text-3xl text-red  font-bold" : ""
             } transition-all`}
           >
-            Skills
+            <Link
+              className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
+              to="skills"
+              smooth={true}
+              offset={200}
+              duartion={500}
+            >
+              Skills
+            </Link>
           </div>
           <div>Projects</div>
         </div>

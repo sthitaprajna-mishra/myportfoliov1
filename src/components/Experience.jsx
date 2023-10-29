@@ -28,7 +28,10 @@ const Experience = ({ setIsExpInView }) => {
   }, [isInView]);
 
   return (
-    <div className="w-fit flex flex-col ml-20 bg-lightWhite justify-evenly border-1 border-green-500 h-screen">
+    <div
+      id="experience"
+      className="w-fit flex flex-col ml-20 bg-lightWhite justify-evenly border-1 border-green-500 h-screen"
+    >
       <div ref={ref} className="text-[2px] text-lightWhite">
         ref
       </div>

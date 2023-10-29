@@ -53,7 +53,10 @@ const Skills = ({ setIsSkillInView }) => {
     }
   }, [isInView]);
   return (
-    <div className="w-fit flex flex-col ml-20 justify-evenly border-1 border-green-500 h-screen">
+    <div
+      id="skills"
+      className="w-fit flex flex-col ml-20 justify-evenly border-1 border-green-500 h-screen"
+    >
       <motion.div
         variants={fadeInAnimationVariations}
         initial="initial"
