@@ -45,7 +45,7 @@ const Wrapper = () => {
               className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
               to="experience"
               smooth={true}
-              offset={60}
+              offset={55}
               duartion={500}
             >
               Experience
