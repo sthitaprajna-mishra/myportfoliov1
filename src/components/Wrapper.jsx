@@ -27,7 +27,11 @@ const Wrapper = () => {
             } transition-all`}
           >
             <Link
-              className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
+              className={
+                !isIntroInView
+                  ? `hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red`
+                  : ""
+              }
               to="introduction"
               smooth={true}
               offset={10}
@@ -42,7 +46,11 @@ const Wrapper = () => {
             } transition-all`}
           >
             <Link
-              className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
+              className={
+                !isExpInView
+                  ? `hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red`
+                  : ""
+              }
               to="experience"
               smooth={true}
               offset={55}
@@ -57,7 +65,11 @@ const Wrapper = () => {
             } transition-all`}
           >
             <Link
-              className="hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red"
+              className={
+                !isSkillInView
+                  ? `hover:underline hover:cursor-pointer hover:underline-offset-4 hover:decoration-red`
+                  : ""
+              }
               to="skills"
               smooth={true}
               offset={200}
