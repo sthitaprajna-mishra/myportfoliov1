@@ -12,6 +12,7 @@ export default {
           "url('https://raw.githubusercontent.com/sthitaprajna-mishra/myportfoliov1/main/src/assets/samplebg1.jpg')",
       },
       colors: {
+        blue1: "#0077b6",
         darkBlue: "#011627",
         lightWhite: "#fdfffc",
         lightBlue: "#2ec4b6",

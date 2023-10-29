@@ -1,15 +1,24 @@
 import Wrapper from "./components/Wrapper";
 
+import { motion, useScroll, useSpring } from "framer-motion";
+
 function App() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <>
-      {/* <div className="hidden font-leagueSpartan md:flex md:justify-end space-x-12 py-6 pr-12 md:sticky md:top-0 bg-lightWhite bg-opacity-95 border-1 border-green-500">
-        <a>Introduction</a>
-        <a>About</a>
-        <a>Experience</a>
-        <a>Projects</a>
-      </div> */}
-      <Wrapper />
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-red rounded-lg origin-left"
+        style={{ scaleX }}
+      />
+      <div>
+        <Wrapper />
+      </div>
     </>
   );
 }
