@@ -1,14 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
 
-const Experience = () => {
+const Experience = ({ setIsExpInView }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  useEffect(() => {
+    if (isInView) {
+      setIsExpInView(true);
+    } else {
+      setIsExpInView(false);
+    }
+  }, [isInView]);
+
   return (
     <div className="w-fit flex flex-col ml-20 bg-lightWhite justify-evenly border-1 border-green-500 h-[95vh]">
       <motion.div
+        ref={ref}
         initial={{ marginLeft: "-2000px", opacity: 0 }}
         whileInView={{ marginLeft: "0", opacity: 1 }}
         transition={{ duration: 0.75 }}
-        className="text-5xl font-semibold text-red"
+        className="text-5xl font-semibold text-darkBlue underline decoration-blue2"
       >
         Experience
       </motion.div>
@@ -17,7 +29,7 @@ const Experience = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="w-5/6 text-xl"
+        className="w-5/6 text-xl text-gray1"
       >
         Having graduated with a bachelor's degree in Information Technology, I
         started working at Deloitte USI and have since gained significant
@@ -32,13 +44,15 @@ const Experience = () => {
         transition={{ duration: 1 }}
         className="flex"
       >
-        <div className="w-1/2 border-t-2 border-t-gray-500 space-y-6">
-          <div className="p-2 border-2 bg-lightWhite border-red rounded-full w-2 -mt-3 -ml-1"></div>
-          <div>
-            <div className="font-semibold text-xl text-red">2017 - 2021</div>
-            <div className="font-bold text-lg">B.Tech</div>
-            <div>
-              <h2 className="uppercase tracking-wide">
+        <div className="w-1/2 border-t-2 border-t-gray1 space-y-6">
+          <div className="p-3 border-2 border-blue2 bg-lightWhite rounded-full w-2 -mt-4"></div>
+          <div className="space-y-2">
+            <div className="font-semibold text-xl font-spaceGrotesk">
+              2017 - 2021
+            </div>
+            <div className="text-lg">B.Tech.</div>
+            <div className="text-gray1">
+              <h2 className="tracking-wide">
                 Odisha University of Technology and Research
               </h2>
               <h2 className="text-sm">
@@ -47,15 +61,15 @@ const Experience = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 space-y-6">
-          <div className="p-2 border-2 bg-lightWhite border-red rounded-full w-2 -mt-2 -ml-1"></div>
-          <div>
-            <div className="font-semibold text-xl text-red">
+        <div className="w-1/2 space-y-6 ">
+          <div className="p-4 bg-red rounded-full w-2 -mt-4"></div>
+          <div className="space-y-2">
+            <div className="font-semibold text-xl font-spaceGrotesk">
               2021 - <span className="italic">current</span>
             </div>
-            <div className="font-bold text-lg">Analyst</div>
+            <div className="text-lg">Analyst</div>
             <div>
-              <h2 className="uppercase tracking-wide">Deloitte USI</h2>
+              <h2 className="text-gray1 tracking-wide">Deloitte USI</h2>
             </div>
           </div>
         </div>

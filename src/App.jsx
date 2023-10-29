@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-red rounded-lg origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-sampleBg2 bg-no-repeat bg-cover rounded-lg origin-left"
         style={{ scaleX }}
       />
       <div>
