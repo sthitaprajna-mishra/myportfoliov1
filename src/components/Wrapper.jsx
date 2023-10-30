@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import Home from "./Home";
 import Experience from "./Experience";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 const Wrapper = () => {
   const [isIntroInView, setIsIntroInView] = useState(false);
@@ -18,6 +19,7 @@ const Wrapper = () => {
         <Home setIsIntroInView={setIsIntroInView} />
         <Experience setIsExpInView={setIsExpInView} />
         <Skills setIsSkillInView={setIsSkillInView} />
+        <Projects />
       </div>
       <div className="col-span-2 border-1 border-black">
         <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
