@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
 
 import { Link } from "react-scroll";
 
@@ -9,6 +10,20 @@ import Projects from "./Projects";
 
 import lightBulbON from "../assets/lightBulbON.png";
 
+const fadeInAnimationVariations = {
+  initial: {
+    opacity: 0,
+    y: -100,
+  },
+  animate: () => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.05,
+    },
+  }),
+};
+
 const Wrapper = () => {
   const [isIntroInView, setIsIntroInView] = useState(false);
   const [isExpInView, setIsExpInView] = useState(false);
@@ -18,6 +33,7 @@ const Wrapper = () => {
   const [isBulbClicked, setIsBulbClicked] = useState(false);
 
   const handleToggleClick = () => {
+    console.log("toggling");
     setIsBulbClicked(!isBulbClicked);
   };
 
@@ -30,18 +46,27 @@ const Wrapper = () => {
         <Projects />
       </div>
       <div className="col-span-2 border-1 border-black">
-        <div
-          className={`mx-auto flex top-2 hover:cursor-pointer transition-all fixed
-          ${
-            isBulbClicked
-              ? "translate-y-4 duration-300"
-              : "translate-y-0 duration-300"
-          }
-          `}
+        <motion.div
+          variants={fadeInAnimationVariations}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className={`mx-auto flex top-2 hover:cursor-pointer transition-all fixed`}
           onClick={handleToggleClick}
         >
-          <img className="h-36" src={lightBulbON} alt="lightBulbON" />
-        </div>
+          <img
+            className={`h-36           
+            ${
+              isBulbClicked
+                ? "translate-y-4 duration-300"
+                : "translate-y-0 duration-300"
+            }`}
+            src={lightBulbON}
+            alt="lightBulbON"
+          />
+        </motion.div>
         <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
           <div
             className={`${
