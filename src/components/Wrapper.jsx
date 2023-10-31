@@ -15,6 +15,12 @@ const Wrapper = () => {
   const [isSkillInView, setIsSkillInView] = useState(false);
   const [isProjInView, setIsProjeInView] = useState(false);
 
+  const [isBulbClicked, setIsBulbClicked] = useState(false);
+
+  const handleToggleClick = () => {
+    setIsBulbClicked(!isBulbClicked);
+  };
+
   return (
     <div className="bg-yellow2 text-darkBlue font-leagueSpartan max-w-[1460px] border-1 border-blue-500 grid grid-cols-12 mx-auto">
       <div className="col-span-10 border-1 border-black">
@@ -24,7 +30,16 @@ const Wrapper = () => {
         <Projects />
       </div>
       <div className="col-span-2 border-1 border-black">
-        <div className="mx-auto flex justify-center fixed top-2">
+        <div
+          className={`mx-auto flex top-2 hover:cursor-pointer transition-all fixed
+          ${
+            isBulbClicked
+              ? "translate-y-4 duration-300"
+              : "translate-y-0 duration-300"
+          }
+          `}
+          onClick={handleToggleClick}
+        >
           <img className="h-36" src={lightBulbON} alt="lightBulbON" />
         </div>
         <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
