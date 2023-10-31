@@ -7,6 +7,8 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Projects from "./Projects";
 
+import lightBulbON from "../assets/lightBulbON.png";
+
 const Wrapper = () => {
   const [isIntroInView, setIsIntroInView] = useState(false);
   const [isExpInView, setIsExpInView] = useState(false);
@@ -22,6 +24,9 @@ const Wrapper = () => {
         <Projects />
       </div>
       <div className="col-span-2 border-1 border-black">
+        <div className="mx-auto flex justify-center fixed top-2">
+          <img className="h-36" src={lightBulbON} alt="lightBulbON" />
+        </div>
         <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
           <div
             className={`${
