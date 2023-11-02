@@ -10,11 +10,12 @@ const ProjectItem = ({ project }) => {
   const [dictionaryProjectHover, setDictionaryProjectHover] = useState(false);
   //   const setPhotoList = usePhotoContext();
 
-  const { setPhotoList } = useContext(PhotoContext);
+  const { setShowPhotos, setPhotoList } = useContext(PhotoContext);
 
   const updatePhotoList = () => {
     console.log("update photos");
     setPhotoList(project.photos);
+    setShowPhotos(true);
   };
 
   return (

@@ -16,25 +16,25 @@ function App() {
   });
 
   const [photoList, setPhotoList] = useState([]);
+  const [showPhotos, setShowPhotos] = useState(false);
 
   console.log(photoList);
 
   return (
     <>
-      <PhotoContext.Provider value={{ photoList, setPhotoList }}>
-        {photoList && photoList.length > 0 ? (
-          <Modal photos={photoList} />
-        ) : (
-          <>
-            <motion.div
-              className="fixed top-0 left-0 right-0 h-1 bg-sampleBg2 bg-no-repeat bg-cover rounded-lg origin-left"
-              style={{ scaleX }}
-            />
-            <div>
-              <Wrapper />
-            </div>
-          </>
-        )}
+      <PhotoContext.Provider
+        value={{ photoList, setPhotoList, showPhotos, setShowPhotos }}
+      >
+        {showPhotos ? <Modal photos={photoList} /> : null}
+        <>
+          <motion.div
+            className="fixed top-0 left-0 right-0 h-1 bg-sampleBg2 bg-no-repeat bg-cover rounded-lg origin-left"
+            style={{ scaleX }}
+          />
+          <div>
+            <Wrapper />
+          </div>
+        </>
       </PhotoContext.Provider>
     </>
   );
