@@ -1,4 +1,9 @@
+import React, { useState } from "react";
+
+import Modal from "./components/Modal";
 import Wrapper from "./components/Wrapper";
+
+import { PhotoContext } from "./context/PhotoContext";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -10,15 +15,27 @@ function App() {
     restDelta: 0.001,
   });
 
+  const [photoList, setPhotoList] = useState([]);
+
+  console.log(photoList);
+
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-sampleBg2 bg-no-repeat bg-cover rounded-lg origin-left"
-        style={{ scaleX }}
-      />
-      <div>
-        <Wrapper />
-      </div>
+      <PhotoContext.Provider value={{ photoList, setPhotoList }}>
+        {photoList && photoList.length > 0 ? (
+          <Modal photos={photoList} />
+        ) : (
+          <>
+            <motion.div
+              className="fixed top-0 left-0 right-0 h-1 bg-sampleBg2 bg-no-repeat bg-cover rounded-lg origin-left"
+              style={{ scaleX }}
+            />
+            <div>
+              <Wrapper />
+            </div>
+          </>
+        )}
+      </PhotoContext.Provider>
     </>
   );
 }

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import dictionaryDesktopDark from "../assets/dictionary_desktop_dark.png";
 import dictionaryDesktopLight from "../assets/dictionary_desktop_light.png";
+import dictionaryMobileDark from "../assets/dictionary_mobile_dark.png";
+import dictionaryMobileLight from "../assets/dictionary_mobile_light.png";
 
 import ProjectItem from "./ProjectItem";
 
@@ -9,7 +11,12 @@ const projectsInfo = [
   {
     id: 1,
     name: "Dictionary Web App",
-    photos: [dictionaryDesktopDark],
+    photos: [
+      dictionaryDesktopDark,
+      dictionaryDesktopLight,
+      dictionaryMobileDark,
+      dictionaryMobileLight,
+    ],
     codeLink: "https://github.com/sthitaprajna-mishra/dictionary-webapp",
     liveServerLink: "https://vocabsearch.netlify.app/",
     details: () => {

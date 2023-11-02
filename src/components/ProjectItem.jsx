@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
+import { PhotoContext } from "../context/PhotoContext";
+
 const ProjectItem = ({ project }) => {
   const [dictionaryProjectHover, setDictionaryProjectHover] = useState(false);
+  //   const setPhotoList = usePhotoContext();
+
+  const { setPhotoList } = useContext(PhotoContext);
+
+  const updatePhotoList = () => {
+    console.log("update photos");
+    setPhotoList(project.photos);
+  };
 
   return (
     <div className="flex items-center gap-x-12">
@@ -16,6 +26,7 @@ const ProjectItem = ({ project }) => {
           alt="dictionaryDesktopDark"
           onMouseEnter={() => setDictionaryProjectHover(true)}
           onMouseLeave={() => setDictionaryProjectHover(false)}
+          onClick={() => updatePhotoList()}
         />
         <div
           className={`${
@@ -63,7 +74,7 @@ const ProjectItem = ({ project }) => {
         <div className="flex gap-x-4">
           {project.techStack.map((tech) => {
             return (
-              <div className="bg-blue2 px-4 pt-1 text-lightWhite rounded-full border border-blue2 transition-all hover:bg-lightWhite hover:border hover:text-darkBlue">
+              <div className="bg-blue1 px-4 pt-1 text-lightWhite rounded-full border border-blue1 transition-all hover:bg-lightWhite hover:border hover:text-darkBlue">
                 {tech}
               </div>
             );
