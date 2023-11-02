@@ -26,14 +26,14 @@ const Modal = ({ photos }) => {
     <div className="bg-black bg-opacity-20 fixed z-10">
       <div className="h-screen w-screen relative border-1 border-green-500">
         <div
-          className="absolute top-4 right-8 hover:cursor-pointer"
+          className="absolute top-4 right-8 transition-all hover:cursor-pointer"
           onClick={() => setShowPhotos(false)}
         >
           <CloseIcon />
         </div>
-        <div className="h-full w-full grid grid-cols-12 border-1 border-red">
+        <div className="h-full w-full grid grid-cols-12  border-1 border-red">
           <div
-            className="col-span-1 m-auto hover:bg-lightWhite rounded"
+            className="col-span-1 m-auto hover:bg-lightWhite rounded transition-all hover:cursor-pointer"
             onClick={prevPhoto}
           >
             <ArrowLeftIcon sx={{ fontSize: "6rem", color: "red" }} />
@@ -46,7 +46,7 @@ const Modal = ({ photos }) => {
             />
           </div>
           <div
-            className="col-span-1 m-auto hover:bg-lightWhite rounded"
+            className="col-span-1 m-auto hover:bg-lightWhite rounded transition-all hover:cursor-pointer"
             onClick={nextPhoto}
           >
             <ArrowRightIcon sx={{ fontSize: "6rem", color: "red" }} />
