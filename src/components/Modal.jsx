@@ -26,7 +26,7 @@ const Modal = ({ photos }) => {
     <div className="bg-black bg-opacity-20 fixed z-10">
       <div className="h-screen w-screen relative border-1 border-green-500">
         <div
-          className="absolute top-4 right-8 transition-all hover:cursor-pointer"
+          className="absolute top-4 right-8 transition-all hover:cursor-pointer hover:text-white"
           onClick={() => setShowPhotos(false)}
         >
           <CloseIcon />
