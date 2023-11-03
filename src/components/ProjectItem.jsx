@@ -32,7 +32,7 @@ const ProjectItem = ({ project }) => {
         <div
           className={`${
             dictionaryProjectHover ? "text-darkBlue" : "text-lightWhite"
-          } text-center text-gray1`}
+          } text-center text-gray1 tracking-wide`}
         >
           Click to open expanded view
         </div>
