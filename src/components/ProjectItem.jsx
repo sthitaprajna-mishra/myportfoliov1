@@ -8,7 +8,6 @@ import { PhotoContext } from "../context/PhotoContext";
 
 const ProjectItem = ({ project }) => {
   const [dictionaryProjectHover, setDictionaryProjectHover] = useState(false);
-  //   const setPhotoList = usePhotoContext();
 
   const { setShowPhotos, setPhotoList } = useContext(PhotoContext);
 
