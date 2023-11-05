@@ -35,11 +35,7 @@ const ProjectItem = ({ project }) => {
         >
           Click to open expanded view
         </div>
-      </div>
-      <div className="col-span-6 pr-8 flex flex-col gap-y-6">
-        <h2 className="text-4xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
-          {project.name}
-        </h2>
+
         <div className="flex text-md gap-x-8">
           <div className="flex items-center gap-x-2">
             <GitHubIcon size="small" />
@@ -69,17 +65,22 @@ const ProjectItem = ({ project }) => {
           </div>
         </div>
 
-        {project.details()}
-
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-2 flex-wrap">
           {project.techStack.map((tech) => {
             return (
-              <div className="bg-blue1 text-white rounded-full py-1 px-4">
+              <div className="bg-blue1 text-white text-sm rounded-full py-1 px-4">
                 {tech}
               </div>
             );
           })}
         </div>
+      </div>
+      <div className="col-span-6 pr-8 flex flex-col gap-y-6">
+        <h2 className="text-4xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
+          {project.name}
+        </h2>
+
+        {project.details()}
       </div>
     </div>
   );

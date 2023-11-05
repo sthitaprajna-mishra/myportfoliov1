@@ -46,10 +46,6 @@ const projectsInfo = [
               informed as participants enter or exit chatrooms.
             </li>
             <li>
-              <span className="font-bold">Concurrent Participation: </span>Join
-              and actively engage in multiple chatrooms simultaneously.
-            </li>
-            <li>
               <span className="font-bold">No Registration Required: </span>Enjoy
               all these functionalities without the necessity of signing up or
               logging in.
