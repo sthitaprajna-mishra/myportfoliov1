@@ -28,8 +28,7 @@ const projectsInfo = [
             <span className="text-blue2 font-bold">
               eliminating the need for user registration or login
             </span>
-            . Seamlessly and securely join conversations and experience the
-            liberating realm of instant communication.
+            .
           </p>
           <ul>
             <li>
