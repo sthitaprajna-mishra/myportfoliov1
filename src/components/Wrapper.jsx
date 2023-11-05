@@ -82,7 +82,6 @@ const Wrapper = () => {
               to="introduction"
               smooth={true}
               offset={10}
-              duartion={500}
             >
               Introduction
             </Link>
@@ -101,7 +100,6 @@ const Wrapper = () => {
               to="experience"
               smooth={true}
               offset={55}
-              duartion={500}
             >
               Experience
             </Link>
@@ -119,8 +117,7 @@ const Wrapper = () => {
               }
               to="skills"
               smooth={true}
-              offset={200}
-              duartion={500}
+              offset={10}
             >
               Skills
             </Link>
