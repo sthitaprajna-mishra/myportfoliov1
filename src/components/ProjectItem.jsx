@@ -18,8 +18,8 @@ const ProjectItem = ({ project }) => {
   };
 
   return (
-    <div className="flex items-center gap-x-12">
-      <div className="flex-1 space-y-4">
+    <div className="grid grid-cols-12 space-x-12 mb-24">
+      <div className="col-span-6 my-auto space-y-4">
         <img
           className="hover:cursor-pointer transition-all"
           src={project.photos[0]}
@@ -36,7 +36,7 @@ const ProjectItem = ({ project }) => {
           Click to open expanded view
         </div>
       </div>
-      <div className="flex-1 pr-8 flex flex-col gap-y-6">
+      <div className="col-span-6 pr-8 flex flex-col gap-y-6">
         <h2 className="text-4xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
           {project.name}
         </h2>
@@ -71,10 +71,10 @@ const ProjectItem = ({ project }) => {
 
         {project.details()}
 
-        <div className="flex gap-x-4">
+        <div className="flex gap-4 flex-wrap">
           {project.techStack.map((tech) => {
             return (
-              <div className="bg-blue1 px-4 pt-1 text-lightWhite rounded-full border border-blue1 transition-all hover:bg-lightWhite hover:border hover:text-darkBlue">
+              <div className="bg-blue1 text-white rounded-full py-1 px-4">
                 {tech}
               </div>
             );
