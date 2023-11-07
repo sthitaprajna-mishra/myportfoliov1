@@ -53,7 +53,7 @@ const Modal = ({ photos }) => {
           </div>
         </div>
         <div className="absolute bottom-4 right-8">
-          <div className="text-2xl font-bold">
+          <div className="text-2xl font-semibold">
             {currentPhoto + 1}/{photos.length}
           </div>
         </div>
