@@ -121,6 +121,14 @@ const Projects = () => {
       {projectsInfo.map((projectItem) => {
         return <ProjectItem key={projectItem.id} project={projectItem} />;
       })}
+
+      <div className="text-3xl font-semibold">
+        Visit my{" "}
+        <span className="text-4xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
+          FrontendMentor
+        </span>{" "}
+        profile for a more detailed review of these UI mockups!
+      </div>
     </div>
   );
 };
