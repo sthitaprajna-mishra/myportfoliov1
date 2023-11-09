@@ -31,7 +31,7 @@ const Modal = ({ photos }) => {
         >
           <CloseIcon />
         </div>
-        <div className="h-full w-full grid grid-cols-12  border-1 border-red">
+        <div className="h-full w-full grid grid-cols-12">
           <div
             className="col-span-1 m-auto hover:bg-lightWhite rounded transition-all hover:cursor-pointer"
             onClick={prevPhoto}
