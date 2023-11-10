@@ -8,6 +8,16 @@ import dictionaryMobileLight from "../assets/dictionary_mobile_light.png";
 import quickchat_1 from "../assets/quickchat_1.png";
 import quickchat_2 from "../assets/quickchat_2.png";
 
+import fe1 from "../assets/screencapture-base-apparel-coming-soon-fe-mentor-netlify-app-2023-11-08-22_05_53.png";
+import fe2 from "../assets/screencapture-four-card-feature-section-fe-mentor-netlify-app-2023-11-08-22_06_13.png";
+import fe3 from "../assets/screencapture-fylo-landing-page-fe-mentor-netlify-app-2023-11-08-22_06_35.png";
+import fe4 from "../assets/screencapture-manage-landing-page-fe-mentor-netlify-app-2023-11-08-22_08_45.png";
+import fe5 from "../assets/screencapture-news-homepage-main-fe-mentor-netlify-app-2023-11-08-22_07_35.png";
+import fe6 from "../assets/screencapture-newsletter-signup-fe-mentor-netlify-app-2023-11-08-22_07_54.png";
+import fe7 from "../assets/screencapture-results-summary-component-fe-mentor-netlify-app-2023-11-08-22_05_36.png";
+import fe8 from "../assets/screencapture-social-proof-section-fe-mentor-netlify-app-2023-11-08-22_05_21.png";
+import fe9 from "../assets/screencapture-time-tracking-dashboard-fe-mentor-netlify-app-2023-11-06-00_35_43.png";
+
 import ProjectItem from "./ProjectItem";
 
 const projectsInfo = [
@@ -128,6 +138,35 @@ const Projects = () => {
           FrontendMentor
         </span>{" "}
         profile for a more detailed review of these UI mockups!
+      </div>
+      <div className="grid grid-cols-12">
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-80">
+          <img src={fe1} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe2} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe3} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4  border border-black h-fit">
+          <img src={fe4} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe5} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe6} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe7} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe8} alt="fe1" className="border border-green-500" />
+        </div>
+        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
+          <img src={fe9} alt="fe1" className="border border-green-500" />
+        </div>
       </div>
     </div>
   );
