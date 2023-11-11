@@ -189,20 +189,22 @@ const Projects = () => {
       <div className="text-3xl font-semibold text-darkBlue text-center underline decoration-blue2 mb-12">
         UI Projects
       </div>
-      <div className="space-y-2">
-        <p className="w-2/3 text-center mx-auto">
-          Design is hard. That is why I prefer FrontendMentor's design-led
-          challenges, which empower me to wield a diverse arsenal of tools,
-          tackling real-world responsive design puzzles head-on.
+      <div className="space-y-4  text-lg">
+        <p className="w-3/4 text-center mx-auto">
+          Design is hard. That is why I prefer{" "}
+          <span className="text-blue2 font-bold">FrontendMentor's</span>{" "}
+          design-led challenges; they empower me to wield a diverse arsenal of
+          tools, tackling real-world responsive{" "}
+          <span className="text-blue2 font-bold">design puzzles</span> head-on.
         </p>
         <p className="w-2/3 text-center mx-auto">
-          Swing by my{" "}
+          Swing by my FrontendMentor{" "}
           <span className="underline decoration-blue2">
             <a
               target="_blank"
               href="https://www.frontendmentor.io/profile/sthitaprajna-mishra"
             >
-              FrontendMentor profile
+              profile
             </a>
           </span>{" "}
           to catch an exclusive glimpse behind the scenes of these projects –
