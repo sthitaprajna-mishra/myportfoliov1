@@ -202,7 +202,7 @@ const Projects = () => {
               target="_blank"
               href="https://www.frontendmentor.io/profile/sthitaprajna-mishra"
             >
-              profile
+              FrontendMentor profile
             </a>
           </span>{" "}
           to catch an exclusive glimpse behind the scenes of these projects –
