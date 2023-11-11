@@ -170,16 +170,28 @@ const Projects = () => {
       <div className="text-5xl font-semibold text-darkBlue underline decoration-blue2 mb-12">
         Projects
       </div>
+      <div className="text-3xl font-semibold text-darkBlue text-center underline decoration-blue2 mb-12">
+        Full Stack Projects
+      </div>
       {projectsInfo.map((projectItem) => {
         return <ProjectItem key={projectItem.id} project={projectItem} />;
       })}
 
-      <div className="text-3xl font-semibold">
-        Visit my{" "}
-        <span className="text-4xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
-          FrontendMentor
-        </span>{" "}
-        profile for a more detailed review of these UI mockups!
+      <div className="text-3xl font-semibold text-darkBlue text-center underline decoration-blue2 mb-12">
+        UI Projects
+      </div>
+      <div className="space-y-2">
+        <p className="w-2/3 text-center mx-auto">
+          Design is hard. That is why I prefer FrontendMentor's design-led
+          challenges empower me to wield a diverse arsenal of tools, tackling
+          real-world design puzzles head-on.
+        </p>
+        <p className="w-2/3 text-center mx-auto">
+          Swing by my{" "}
+          <span className="underline decoration-blue2">profile</span> to catch
+          an exclusive glimpse behind the scenes of these projects – it's where
+          the design magic happens! 🚀✨
+        </p>
       </div>
 
       <Box className="mx-6 mt-12">
