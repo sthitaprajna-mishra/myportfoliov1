@@ -215,7 +215,7 @@ const Projects = () => {
           {itemData.map((item, index) => (
             <div
               key={index}
-              className="shadow-lg overflow-hidden rounded border border-gray-200"
+              className="shadow-lg overflow-hidden bg-gray-200 rounded border-2 border-gray-200"
             >
               {/* <Label>{index + 1}</Label> */}
               <a target="_blank" href={item.url}>
