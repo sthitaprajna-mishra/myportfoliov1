@@ -192,8 +192,8 @@ const Projects = () => {
       <div className="space-y-2">
         <p className="w-2/3 text-center mx-auto">
           Design is hard. That is why I prefer FrontendMentor's design-led
-          challenges empower me to wield a diverse arsenal of tools, tackling
-          real-world responsive design puzzles head-on.
+          challenges, which empower me to wield a diverse arsenal of tools,
+          tackling real-world responsive design puzzles head-on.
         </p>
         <p className="w-2/3 text-center mx-auto">
           Swing by my{" "}
