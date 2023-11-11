@@ -76,7 +76,7 @@ const ProjectItem = ({ project }) => {
         </div>
       </div>
       <div className="col-span-6 pr-8 flex flex-col gap-y-6">
-        <h2 className="text-4xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
+        <h2 className="text-3xl bg-sampleBg2 bg-no-repeat bg-cover bg-clip-text text-transparent font-bold ">
           {project.name}
         </h2>
 
