@@ -130,7 +130,7 @@ const itemData = [
     title: "Fern",
   },
   {
-    img: fe2,
+    img: fe9,
     title: "Snacks",
   },
   {
@@ -138,7 +138,7 @@ const itemData = [
     title: "Mushrooms",
   },
   {
-    img: fe4,
+    img: fe8,
     title: "Tower",
   },
   {
@@ -146,7 +146,7 @@ const itemData = [
     title: "Sea star",
   },
   {
-    img: fe6,
+    img: fe4,
     title: "Honey",
   },
   {
@@ -154,11 +154,11 @@ const itemData = [
     title: "Basketball",
   },
   {
-    img: fe8,
+    img: fe2,
     title: "Breakfast",
   },
   {
-    img: fe9,
+    img: fe6,
     title: "Tree",
   },
 ];
@@ -264,12 +264,16 @@ const Projects = () => {
         profile for a more detailed review of these UI mockups!
       </div>
 
-      <Box sx={{ width: 900, minHeight: 829 }}>
+      <Box className="mx-6">
         <Masonry columns={3} spacing={2}>
           {itemData.map((item, index) => (
-            <div key={index}>
-              <Label>{index + 1}</Label>
+            <div
+              key={index}
+              className="shadow-lg overflow-hidden rounded border border-gray-200"
+            >
+              {/* <Label>{index + 1}</Label> */}
               <img
+                className="hover:scale-125 transition-all"
                 srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=162&auto=format`}
                 alt={item.title}
@@ -285,36 +289,6 @@ const Projects = () => {
           ))}
         </Masonry>
       </Box>
-
-      <div className="grid grid-cols-12">
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-80">
-          <img src={fe1} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe2} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe3} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4  border border-black h-fit">
-          <img src={fe4} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe5} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe6} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe7} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe8} alt="fe1" className="border border-green-500" />
-        </div>
-        <div className="f col-span-12 md:col-span-6 lg:col-span-4 border border-black h-fit">
-          <img src={fe9} alt="fe1" className="border border-green-500" />
-        </div>
-      </div>
     </div>
   );
 };
