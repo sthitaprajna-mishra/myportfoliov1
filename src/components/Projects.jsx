@@ -125,39 +125,48 @@ const projectsInfo = [
 const itemData = [
   {
     img: fe9,
-    title: "Fern",
+    title: "time-tracking-dashboard",
+    url: "https://time-tracking-dashboard-fe-mentor.netlify.app/",
   },
   {
     img: fe1,
-    title: "Snacks",
+    title: "base-apparel-coming-soon",
+    url: "https://base-apparel-coming-soon-fe-mentor.netlify.app/",
   },
   {
     img: fe3,
-    title: "Mushrooms",
+    title: "fylo-landing-page",
+    url: "https://fylo-landing-page-fe-mentor.netlify.app/",
   },
   {
     img: fe8,
-    title: "Tower",
+    title: "social-proof-section",
+    url: "https://social-proof-section-fe-mentor.netlify.app/",
   },
   {
     img: fe5,
-    title: "Sea star",
+    title: "news-homepage-main",
+    url: "https://news-homepage-main-fe-mentor.netlify.app/",
   },
   {
     img: fe4,
-    title: "Honey",
+    title: "manage-landing-page",
+    url: "https://manage-landing-page-fe-mentor.netlify.app/",
   },
   {
     img: fe7,
-    title: "Basketball",
+    title: "results-summary-component",
+    url: "https://results-summary-component-fe-mentor.netlify.app/",
   },
   {
     img: fe2,
-    title: "Breakfast",
+    title: "four-card-feature-section",
+    url: "https://four-card-feature-section-fe-mentor.netlify.app/",
   },
   {
     img: fe6,
-    title: "Tree",
+    title: "newsletter-signup",
+    url: "https://newsletter-signup-fe-mentor.netlify.app/",
   },
 ];
 
@@ -188,9 +197,16 @@ const Projects = () => {
         </p>
         <p className="w-2/3 text-center mx-auto">
           Swing by my{" "}
-          <span className="underline decoration-blue2">profile</span> to catch
-          an exclusive glimpse behind the scenes of these projects – it's where
-          the design magic happens! 🚀✨
+          <span className="underline decoration-blue2">
+            <a
+              target="_blank"
+              href="https://www.frontendmentor.io/profile/sthitaprajna-mishra"
+            >
+              profile
+            </a>
+          </span>{" "}
+          to catch an exclusive glimpse behind the scenes of these projects –
+          it's where the design magic happens! 🚀✨
         </p>
       </div>
 
@@ -202,19 +218,21 @@ const Projects = () => {
               className="shadow-lg overflow-hidden rounded border border-gray-200"
             >
               {/* <Label>{index + 1}</Label> */}
-              <img
-                className="hover:scale-125 transition-all"
-                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=162&auto=format`}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  borderBottomLeftRadius: 4,
-                  borderBottomRightRadius: 4,
-                  display: "block",
-                  width: "100%",
-                }}
-              />
+              <a target="_blank" href={item.url}>
+                <img
+                  className="hover:scale-125 transition-all"
+                  srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=162&auto=format`}
+                  alt={item.title}
+                  loading="lazy"
+                  style={{
+                    borderBottomLeftRadius: 4,
+                    borderBottomRightRadius: 4,
+                    display: "block",
+                    width: "100%",
+                  }}
+                />
+              </a>
             </div>
           ))}
         </Masonry>
