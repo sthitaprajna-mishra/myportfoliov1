@@ -172,10 +172,7 @@ const itemData = [
 
 const Projects = () => {
   return (
-    <div
-      id="projects"
-      className="w-fit flex flex-col ml-20 justify-evenly border-1 border-green-500 "
-    >
+    <div id="projects" className="w-fit flex flex-col ml-20 justify-evenly">
       <div className="text-5xl font-semibold text-darkBlue underline decoration-blue2 mb-12">
         Projects
       </div>
