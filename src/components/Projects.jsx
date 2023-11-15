@@ -186,7 +186,7 @@ const Projects = () => {
       <div className="text-3xl font-semibold text-darkBlue text-center underline decoration-blue2 mb-12">
         UI Projects
       </div>
-      <div className="space-y-4  text-lg">
+      <div className="space-y-4 text-lg">
         <p className="w-3/4 text-center mx-auto">
           Design is hard. That is why I prefer{" "}
           <span className="text-blue2 font-bold">FrontendMentor's</span>{" "}
