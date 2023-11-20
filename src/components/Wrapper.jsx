@@ -67,7 +67,7 @@ const Wrapper = () => {
             alt="lightBulbON"
           />
         </motion.div>
-        <div className="my-auto border-1 border-black text-xl space-y-6 fixed right-1/5 top-1/3">
+        <div className="my-auto text-xl space-y-6 fixed right-1/5 top-1/3">
           <div
             className={`${
               isIntroInView ? "text-3xl text-red  font-bold" : ""
