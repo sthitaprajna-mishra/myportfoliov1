@@ -31,7 +31,7 @@ const Home = ({ setIsIntroInView }) => {
   return (
     <div
       id="introduction"
-      className="w-fit flex flex-col ml-20 justify-evenly border-1 border-green-500 h-screen"
+      className="w-fit flex flex-col ml-20 justify-evenly h-screen"
     >
       <div className="md:hidden">
         <LunchDiningIcon className="text-orange" style={{ fontSize: "3rem" }} />
